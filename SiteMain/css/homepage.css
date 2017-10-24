@@ -2,3 +2,22 @@ html,
 body {
 background-color:  #050b0b;
 }
+.videopad {
+    margin: 50px auto 120px;
+}
+.videocontain {
+position: relative;
+padding-bottom: 56.1%;
+height: 0;
+overflow: hidden;
+}
+
+.videocontain iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* NAV BAR */

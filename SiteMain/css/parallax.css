@@ -4,7 +4,7 @@
 .parallax {
   -webkit-perspective: 100px;
           perspective: 100px;
-  height: 130vh;
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
@@ -24,20 +24,21 @@
 }
 .parallax__layer img {
   display: block;
-  position: absolute;
+  position:absolute;
   bottom: 0;
 }
 
 .parallax__cover {
   background: #050b0b;
   display: block;
-  position: absolute;
+  position: fixed;
   top: 100%;
   left: 0;
   right: 0;
   height: 2000px;
   z-index: 2;
 }
+
 
 .parallax__layer__0 {
   -webkit-transform: translateZ(-300px) scale(4);
