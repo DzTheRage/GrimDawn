@@ -31,7 +31,7 @@
 .parallax__cover {
   background: #050b0b;
   display: block;
-  position: fixed;
+  position: absolute;
   top: 100%;
   left: 0;
   right: 0;
