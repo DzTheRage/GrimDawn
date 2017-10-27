@@ -9,45 +9,88 @@
 	<meta name="author" content="Scott Vance" />
     <title>Grim Dawn Redesign</title>
     <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="css/parallax.css">
+	<link rel="stylesheet" href="css/mobilenav.css">
+	<!-- SCRIPTS -->
+	<script src="/js/modernizr.custom.js"></script>
 </head>
 <body>
-	<!-- SIDEBAR NAVIGATION -->
-	
-	<!-- END NAVIGATGION --->
+<!--- Mobile NAV --->
+<div class="container-fluid">
+	<div class="mobilenav fixed-top">
+		<div class="menu-wrap">
+			<div class="mobilelogoWRAP">
+				<img class="mobileLogoCompact " src="parallaximg/logoCOMPACT.png">
+			</div>
+					<nav class="menu">
+						<div class="icon-list">
+							<ul>
+								<li class="firstchild"><a href="#home"><div class="navLabel">Home</div></a></li>
+								<li><a href="#classes"><div class="navLabel">Classes</div></a></li>
+								<li><a href="#uniques"><div class="navLabel">Unique Items</div></a></li>
+								<li><a href="#setting"><div class="navLabel">Setting</div></a></li>
+								<li><a href="#expansion"><div class="navLabel">Expansion Features</div></a></li>
+							</ul>
+							<ul class="mobileButton">
+								<li class="hideBorder"><a href="buygame.com"><div class="mobileButtonLink">BUY NOW</div></a></li>
+							</ul>
+						<ul class="social-links">
+								<li class="hideBorder"><a href="about.html" class="social"><i class="fa fa-facebook moverighter IconSize" aria-hidden="true"><div class="socialItem">Facebook Page</div></i></a></li>
+								<li class="hideBorder"><a href="index.html" class="social"><i class="fa fa-twitter moveright IconSize" aria-hidden="true"><div class="socialItem">Another Social</div></i></a></li>
+								<li class="hideBorder"><a href="works.html" class="social"><i class="fa fa-youtube-play moveright IconSize" aria-hidden="true"><div class="socialItem">YouTube Channel</div></i></a></li>
+							</ul>
+					</div>
+				</nav>
+			<button class="close-button" id="close-button">Close Menu</button>
+		</div>
+		<button class="menu-button" id="open-button">Open Menu</button>
+	</div>
+</div>
+<!-- END Mobile Nav --->
+<!-- SIDEBAR NAV -->
+
+<!-- END SIDEBAR NAV --->	
+<!-- END NAV  --->
     <div class="container-fluid">
 		<!-- PARALLAX -->
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="parallax">
-                    <div class="parallax__layer parallax__layer__0">
-                        <img src="parallaximg/layer0.png" />
-                    </div>
-                    <div class="parallax__layer parallax__layer__1">
-                        <img src="parallaximg/layer1.png" />
-                    </div>
-                    <div class="parallax__layer parallax__layer__2">
-                        <img src="parallaximg/layer2.png" />
-                    </div>
-                    <div class="parallax__layer parallax__layer__3">
-                        <img src="parallaximg/layer3.png" />
-                    </div>
-                    <div class="parallax__layer parallax__layer__4">
-                        <img src="parallaximg/layer4.png" />
-                    </div>
-                    <div class="parallax__layer parallax__layer__5">
-                        <img src="parallaximg/layer5.png" />
-                    </div>
-                    <div class="parallax__layer parallax__layer__6">
-                        <img src="parallaximg/layer6.png" />
-                    </div>
+					<div class="desktopShow">
+						<div class="parallax__layer parallax__layer__0">
+							<img src="parallaximg/layer0.png" />
+						</div>
+						<div class="parallax__layer parallax__layer__1">
+							<img src="parallaximg/layer1.png" />
+						</div>
+						<div class="parallax__layer parallax__layer__2">
+							<img src="parallaximg/layer2.png" />
+						</div>
+						<div class="parallax__layer parallax__layer__3">
+							<img src="parallaximg/layer3.png" />
+						</div>
+						<div class="parallax__layer parallax__layer__4">
+							<img src="parallaximg/layer4.png" />
+						</div>
+						<div class="parallax__layer parallax__layer__5">
+							<img src="parallaximg/layer5.png" />
+						</div>
+						<div class="parallax__layer parallax__layer__6">
+							<img src="parallaximg/layer6.png" />
+						</div>
+					</div>
+					<div class="mobileShow">
+						<img class="mobileimg" src="parallaximg/mobile.png">
+					</div>
                     <div class="parallax__cover">
 						  <div class="container">
 								<div class="row">
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<img class="mobileLOGO" src="parallaximg/gdheaderboxtop.png">
 										<p style="color:white;">Return to the apocalyptic fantasy world of Grim Dawn with two brand new chapters in
 										humanity’s struggle against impossible odds. With new threats arising in the fallen city of Malmouth, you must
 										forge new alliances and bring the fight to the Aetherial invaders at last! Venture into dangerous new parts of
@@ -66,8 +109,13 @@
 				</div>
             </div>
         </div>
-    </div> <!-- PARALLAX END -->
-	
+    </div> <!-- CONTENT END -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+    <!-- SCRIPTS -->
+    <script src="/js/classie.js"></script>
+	<script src="/js/main.js"></script>
 </body>
 
 </html>

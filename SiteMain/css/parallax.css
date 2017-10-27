@@ -26,12 +26,13 @@
   display: block;
   position:absolute;
   bottom: 0;
+  width:100%;
 }
 
 .parallax__cover {
   background: #050b0b;
   display: block;
-  position: fixed;
+  position: absolute;
   top: 100%;
   left: 0;
   right: 0;
@@ -74,3 +75,37 @@
   -webkit-transform: translateZ(0px) scale(1);
           transform: translateZ(0px) scale(1);
 }
+
+/* MEDIA  */
+
+.desktopShow {
+  display:block;
+}
+
+.mobileShow {
+  display:none;
+}
+.mobileimg {
+  width:100%;
+}
+.mobileLOGO {
+  display:none;
+}
+
+/** MEDIA QUERIES **/
+@media (max-width: 800px) {
+  .desktopShow {
+    display:none;
+  }
+  .mobileShow {
+    display:block;
+  }
+  .mobileLOGO {
+    display:block;
+    width:100%;
+  }
+  .parallax__cover {
+    position:static;
+  }
+}
+ 
