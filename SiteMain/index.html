@@ -9,40 +9,141 @@
 	<meta name="author" content="Scott Vance" />
     <title>Grim Dawn Redesign</title>
     <!-- CSS -->
+	<!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+	<!-- CAROSUEL -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- WORKING BOOTSTRAP -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+	<!-- COMPONENTS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="css/parallax.css">
+	<link rel="stylesheet" href="css/desktopNAV.css">
 	<link rel="stylesheet" href="css/mobilenav.css">
+	<link rel="stylesheet" href="css/lightbox.css">
 	<!-- SCRIPTS -->
 	<script src="/js/modernizr.custom.js"></script>
+	
 </head>
-<body>
+<body onload="myFunction();">
+<div class="container" id="loaderDIV">
+	<div class="row">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 loaderHeight">
+			<div id="loader"></div>
+			<p class="loaderparagraph">Grim Dawn: Ashes of Malmouth is loading.</p>
+		</div>
+	</div>
+</div>
+<div id="loaded">
+<!-- SIDEBAR NAV -->
+<div class="DesktopNAV hidemobile">
+<div class="DesktopNAVwrap">
+	<div class="VertAlign">
+		<div class="VertAlign-section">
+			<div class="VertAlign-block">
+				<ul class="NavUL NavUL--gameSite">
+					<li class="Navigation-item">
+					<a class="Navigation-link" href="http://www.grimdawn.com/">
+					<span class="Navigation-label">Grim dawn site</span>
+					<span class="Navigation-icon Navigation-icon--gameSite"></span>
+					</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="VertAlign-section">
+			<div class="VertAlign-block VertAlign-block--middle">
+				<ul class="NavUL">
+					<li class="Navigation-item">
+						<a class="Navigation-link" href="#home">
+						<div class="Navigation-label">Home</div>
+						<div class="Navigation-icon Navigation-icon-constellations Navigation-icon--home"></div>
+						</a>
+					</li>
+					<li class="Navigation-item">
+						<a class="Navigation-link" href="#inquisitor">
+						<div class="Navigation-label">Masteries</div>
+						<div class="Navigation-icon Navigation-icon-constellations Navigation-icon--mastery"></div>
+						</a>
+					</li>
+					<li class="Navigation-item">
+						<a class="Navigation-link" href="#uniques">
+						<div class="Navigation-label">Uniques</div>
+						<div class="Navigation-icon Navigation-icon-constellations Navigation-icon--uniques"></div>
+						</a>
+					</li>
+					<li class="Navigation-item">
+						<a class="Navigation-link" href="#setting">
+						<div class="Navigation-label">Setting</div>
+						<div class="Navigation-icon Navigation-icon-constellations Navigation-icon--setting"></div>
+						</a>
+					</li>
+					<li class="Navigation-item">
+						<a class="Navigation-link" href="#expansionfeatures">
+						<div class="Navigation-label">Expansion Features</div>
+						<div class="Navigation-icon Navigation-icon-constellations Navigation-icon--expansionfeatures"></div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="VertAlign-section">
+			<div class="VertAlign-block VertAlign-block--collapse">
+				<ul class="NavUL">
+					<li class="Navigation-item">
+						<a class="Navigation-link" href="https://www.facebook.com/GrimDawn/">
+						<div class="Navigation-label">Facebook</div>
+						<div class="socialNAV Navigation-icon Navigation-icon-facebook"></div>
+						</a>
+					</li>
+					<li class="Navigation-item">
+						<a class="Navigation-link" href="https://twitter.com/grimdawn?lang=en">
+						<div class="Navigation-label">Twitter</div>
+						<div class="socialNAV Navigation-icon Navigation-icon-twitter"></div>
+					</a>
+					</li>
+
+					<li class="Navigation-item">
+						<a class="Navigation-link" href="https://www.youtube.com/user/crateentertainment">
+						<div class="Navigation-label">Youtube</div>
+						<div class="Navigation-icon socialNAV Navigation-icon-youtube"></div>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- END SIDEBAR NAV --->	
 <!--- Mobile NAV --->
 <div class="container-fluid">
 	<div class="mobilenav fixed-top">
 		<div class="menu-wrap">
 			<div class="mobilelogoWRAP">
-				<img class="mobileLogoCompact " src="parallaximg/logoCOMPACT.png">
+				<img class="mobileLogoCompact " src="navIMG/logoCOMPACT.png">
 			</div>
 					<nav class="menu">
+						<div class="menu-links">
 						<div class="icon-list">
 							<ul>
-								<li class="firstchild"><a href="#home"><div class="navLabel">Home</div></a></li>
-								<li><a href="#classes"><div class="navLabel">Classes</div></a></li>
-								<li><a href="#uniques"><div class="navLabel">Unique Items</div></a></li>
+								<li class="firstchild"><a href="#homeMobile"><div class="navLabel">Home</div></a></li>
+								<li><a href="#inquisitor"><div class="navLabel">Masteries</div></a></li>
+								<li><a href="#uniques"><div class="navLabel">Uniques</div></a></li>
 								<li><a href="#setting"><div class="navLabel">Setting</div></a></li>
-								<li><a href="#expansion"><div class="navLabel">Expansion Features</div></a></li>
+								<li><a href="#expansionfeatures"><div class="navLabel">Expansion Features</div></a></li>
 							</ul>
 							<ul class="mobileButton">
 								<li class="hideBorder"><a href="buygame.com"><div class="mobileButtonLink">BUY NOW</div></a></li>
 							</ul>
 						<ul class="social-links">
 								<li class="hideBorder"><a href="about.html" class="social"><i class="fa fa-facebook moverighter IconSize" aria-hidden="true"><div class="socialItem">Facebook Page</div></i></a></li>
-								<li class="hideBorder"><a href="index.html" class="social"><i class="fa fa-twitter moveright IconSize" aria-hidden="true"><div class="socialItem">Another Social</div></i></a></li>
+								<li class="hideBorder"><a href="index.html" class="social"><i class="fa fa-twitter moveright IconSize" aria-hidden="true"><div class="socialItem">Twitter Channel</div></i></a></li>
 								<li class="hideBorder"><a href="works.html" class="social"><i class="fa fa-youtube-play moveright IconSize" aria-hidden="true"><div class="socialItem">YouTube Channel</div></i></a></li>
 							</ul>
+					</div>
 					</div>
 				</nav>
 			<button class="close-button" id="close-button">Close Menu</button>
@@ -51,15 +152,13 @@
 	</div>
 </div>
 <!-- END Mobile Nav --->
-<!-- SIDEBAR NAV -->
-
-<!-- END SIDEBAR NAV --->	
-<!-- END NAV  --->
-    <div class="container-fluid">
-		<!-- PARALLAX -->
-        <div class="row">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="parallax">
+<!-- CONTENT START -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<!-- PARALLAX -->
+			<div class="content-wrap">
+                <div class="parallax" id="parallaxID">
 					<div class="desktopShow">
 						<div class="parallax__layer parallax__layer__0">
 							<img src="parallaximg/layer0.png" />
@@ -80,42 +179,499 @@
 							<img src="parallaximg/layer5.png" />
 						</div>
 						<div class="parallax__layer parallax__layer__6">
-							<img src="parallaximg/layer6.png" />
+							<img src="parallaximg/layer6.png" class="heightIMG" id="home"/>
 						</div>
 					</div>
 					<div class="mobileShow">
-						<img class="mobileimg" src="parallaximg/mobile.png">
+						<img class="mobileimg" src="mobileIMG/grimdawnMobile.jpg" id="homeMobile">
 					</div>
                     <div class="parallax__cover">
-						  <div class="container">
+						  <div class="container introParagraph">
 								<div class="row">
 									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-										<img class="mobileLOGO" src="parallaximg/gdheaderboxtop.png">
-										<p style="color:white;">Return to the apocalyptic fantasy world of Grim Dawn with two brand new chapters in
-										humanity’s struggle against impossible odds. With new threats arising in the fallen city of Malmouth, you must
-										forge new alliances and bring the fight to the Aetherial invaders at last! Venture into dangerous new parts of
-										the world as you discover unique items, empower your characters and make difficult choices that have a lasting
-										impact on the people of Cairn. </p>
-									</div>
-									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 videopad">
-										<div class="videocontain">
-											<iframe src="https://www.youtube.com/embed/oz2Z6hN5YBs" allowfullscreen="" frameborder="0">
-											</iframe>
+										<img class="mobileLOGO" src="mobileIMG/gdheaderboxtop.png">
+										<div class="SectionCopyDiv centered">
+											<p>Return to the apocalyptic fantasy world of Grim Dawn with two brand new chapters in
+											humanity’s struggle against impossible odds. With new threats arising in the fallen city of Malmouth, you must
+											forge new alliances and bring the fight to the Aetherial invaders at last! Venture into dangerous new parts of
+											the world as you discover unique items, empower your characters and make difficult choices that have a lasting
+											impact on the people of Cairn.</p>
+										</div>
+										<div class="buttonPad text-center">
+											<a href="http://store.steampowered.com/app/642280/Grim_Dawn__Ashes_of_Malmouth_Expansion/" class="buyButton">BUY NOW</a>
 										</div>
 									</div>
 								</div>
-						  </div> <!-- END MAIN CONTAIN -->
+						  </div>
+						<!-- INQUISTOR -->
+						<div class="container-fluid Section SectionDivider1" id="inquisitor">
+							<div class="videoBgDiv">
+								<div class="VideoBackground-container">
+									<video xmlns="http://www.w3.org/1999/xhtml" class="VideoBackground-video" autoplay loop muted>
+										<source src="video/grimINQ.webm" type="video/webm" />
+										<source src="video/grimINQ.mp4" type="video/mp4" />
+									</video>
+								</div>
+								<div class="container">
+									<div class="row">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="videoHeaderDiv">
+												<h2>Mastery</h2>
+												<h1>Inquisitor</h1>
+											</div>
+										</div>
+									</div>
+								 </div>
+							</div>
+							<div class="row">
+							<img class="mobileimg hidedesktop" src="mobileIMG/inq.jpg">
+							</div>
+						</div>
+						<!-- CLASS COPY -->
+						<div class="container ClassInfoDiv">
+								<div class="row">
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 centered">
+										<div class="SectionCopyDiv">
+												<div class="videoHeaderDiv hidedesktop">
+													<h2>Mastery</h2>
+													<h1>Inquisitor</h1>
+												</div>
+											<p>As members of the esteemed Luminari Order, Inquisitors were responsible for protecting
+											the Erulan Empire from the dangers of the arcane and the occult. Over the centuries, the Inquisitors
+											gathered countless relics of unimaginable power, but duty sometimes overcomes safety, and some of these
+											relics were studied and in turn replicated for use by the inquisition. While they excel with ranged weapons,
+											Inquisitors are armed with an arsenal of relics and arcane runes that allow them to be more than capable
+											in close-quarters combat.</p>
+										</div>
+									</div>
+								</div>
+								<!-- CLASS SKILLS -->
+								<div class="row marginTopBig">
+									<!-- SKILL 1 -->
+									<div class="col-xl-4 col-lg-4 col-md-12 col-col-sm-12 col-xs-12 skillDiv">
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 col-md-3 col-sm-3 col-xs-3 skillImgDiv">
+												<img class="scaleImg" src="http://www.grimdawn.com/webfiles/guide/gdx_class07_feature01.gif" />
+											</div>
+											<div class="col-xl-12 col-lg-12 col-md-9 col-sm-9 col-xs-9">
+												<h3>Rune Magic</h3>
+												<p class="paragraphSmall">
+												Inquisitors use arcane runes and words of power to cripple their foes and empower their allies. 
+												</p>
+											</div>
+										</div>
+									</div>
+									<!-- SKILL 2 -->
+									<div class="col-xl-4 col-lg-4 col-md-12 col-col-sm-12 col-xs-12 skillDiv">
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 col-md-3 col-sm-3 col-xs-3 skillImgDiv">
+												<img class="scaleImg" src="http://www.grimdawn.com/webfiles/guide/gdx_class07_feature02.gif" />
+											</div>
+											<div class="col-xl-12 col-lg-12 col-md-9 col-sm-8 col-xs-9">
+												<h3>Forbidden Artifacts</h3>
+												<p class="paragraphSmall">
+												Armed with replicas of ancient relics, Inquisitors use forbidden treasures to incinerate, freeze and
+												electrocute the enemies of mankind. 
+												</p>
+											</div>
+										</div>
+									</div>
+									<!-- SKILL 3 -->
+									<div class="col-xl-4 col-lg-4 col-md-12 col-col-sm-12 col-xs-12 skillDiv">
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 col-md-3 col-sm-3 col-xs-3 skillImgDiv">
+												<img class="scaleImg" src="http://www.grimdawn.com/webfiles/guide/gdx_class07_feature03.gif" />
+											</div>
+											<div class="col-xl-12 col-lg-12 col-md-9 col-sm-9 col-xs-9">
+												<h3>Ranged Expertise</h3>
+												<p class="paragraphSmall">
+												While they are experts with any weapon, Inquisitors excel with ranged weaponry, even opting to wield
+												two pistols at the same time. 
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+						<!--- NECRO -->
+						<div class="container-fluid Section SectionDivider2">
+							<div class="videoBgDiv">
+								<div class="VideoBackground-container">
+									<video xmlns="http://www.w3.org/1999/xhtml" class="VideoBackground-video" autoplay loop muted>
+										<source src="video/grimNECRO.webm" type="video/webm" />
+										<source src="video/grimNECRO.mp4" type="video/mp4" />
+									</video>
+								</div>
+								<div class="container">
+									<div class="row">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="videoHeaderDiv">
+												<h2>Mastery</h2>
+												<h1>Necromancer</h1>
+											</div>
+										</div>
+									</div>
+								 </div>
+							</div>
+							<div class="row">
+							<img class="mobileimg hidedesktop" src="mobileIMG/necro.jpg">
+							</div>
+						</div>
+						<!-- CLASS COPY -->
+						<div class="container ClassInfoDiv">
+								<div class="row">
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 centered">
+										<div class="SectionCopyDiv">
+												<div class="videoHeaderDiv hidedesktop">
+													<h2>Mastery</h2>
+													<h1>Necromancer</h1>
+												</div>
+											<p>Though most modern Necromancers hail from the Order of Death's Vigil and the training of the mysterious
+											Uroboruuk, not all choose the secluded life. While their profession naturally inspires fear and revulsion,
+											the Necromancers of Cairn seek balance through research and mastery over the ultimate fate that awaits all
+											mortals: death. Necromancers make heavy use of conjuring forth skeletal minions and sapping the very vitality
+											from their unwary foes, though entering the fray themselves with martial weapons is not unheard of. </p>
+										</div>
+									</div>
+								</div>
+								<!-- CLASS SKILLS -->
+								<div class="row marginTopBig">
+									<!-- SKILL 1 -->
+									<div class="col-xl-4 col-lg-4 col-md-12 col-col-sm-12 col-xs-12 skillDiv">
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 col-md-3 col-sm-3 col-xs-3 skillImgDiv">
+												<img class="scaleImg" src="http://www.grimdawn.com/webfiles/guide/gdx_class08_feature01.gif" />
+											</div>
+											<div class="col-xl-12 col-lg-12 col-md-9 col-sm-9 col-xs-9">
+												<h3>Master of the Dead</h3>
+												<p class="paragraphSmall">
+												Necromancers are masters of death, conjuring lifeless minions to serve them and tear apart their foes. 
+												</p>
+											</div>
+										</div>
+									</div>
+									<!-- SKILL 2 -->
+									<div class="col-xl-4 col-lg-4 col-md-12 col-col-sm-12 col-xs-12 skillDiv">
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 col-md-3 col-sm-3 col-xs-3 skillImgDiv">
+												<img class="scaleImg" src="http://www.grimdawn.com/webfiles/guide/gdx_class08_feature03.gif" />
+											</div>
+											<div class="col-xl-12 col-lg-12 col-md-9 col-sm-9 col-xs-9">
+												<h3>Blight</h3>
+												<p class="paragraphSmall">
+												Necromancers use the power of the grave to debilitate and infect their foes, spreading disease
+												and rot on the battlefield through their own dark magic and the unstable husks of their minions. 
+												</p>
+											</div>
+										</div>
+									</div>
+									<!-- SKILL 3 -->
+									<div class="col-xl-4 col-lg-4 col-md-12 col-col-sm-12 col-xs-12 skillDiv">
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 col-md-3 col-sm-3 col-xs-3 skillImgDiv">
+												<img class="scaleImg" src="http://www.grimdawn.com/webfiles/guide/gdx_class08_feature02.gif" />
+											</div>
+											<div class="col-xl-12 col-lg-12 col-md-9 col-sm-8 col-xs-9">
+												<h3>Harvester of Souls</h3>
+												<p class="paragraphSmall">
+												Necromancers harvest the very life essence of their foes, transferring the precious vitality into themselves
+												while leaving behind dessicated corpes. 
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+						<!-- UNIQUES -->
+						<div class="container-fluid SectionDivider1" id="uniques">
+							<div class="container ClassInfoDiv2 Section">
+									<div class="row">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 centered">
+											<div class="SectionCopyDiv">
+													<div class="">
+														<h2>Uniques</h2>
+														<h1>Claim Powerful Items</h1>
+													</div>
+											</div>
+											<!-- MOBILE CAROUSEL -->
+											<div class="hidedesktop carouselDiv">
+												<div id="myCarousel" class="carousel slide" data-ride="carousel">
+													<!-- Indicators -->
+													<ol class="carousel-indicators">
+													  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+													  <li data-target="#myCarousel" data-slide-to="1"></li>
+													  <li data-target="#myCarousel" data-slide-to="2"></li>
+													  <li data-target="#myCarousel" data-slide-to="3"></li>
+													  <li data-target="#myCarousel" data-slide-to="4"></li>
+													  <li data-target="#myCarousel" data-slide-to="5"></li>
+													  <li data-target="#myCarousel" data-slide-to="6"></li>
+													  <li data-target="#myCarousel" data-slide-to="7"></li>
+													</ol>
+													<!-- Wrapper for slides -->
+													<div class="carousel-inner" role="listbox">
+													  <div class="item active">
+														<img class="uniqueIMG" src="uniques/unique1.jpg" alt="uniqueITEM">
+													  </div>
+												
+													  <div class="item">
+														<img class="uniqueIMG" src="uniques/unique3.jpg" alt="uniqueITEM">
+													  </div>
+													
+													  <div class="item">
+														<img class="uniqueIMG" src="uniques/unique8.jpg" alt="uniqueITEM">
+													  </div>
+													  
+													  <div class="item">
+														<img class="uniqueIMG" src="uniques/unique4.jpg" alt="uniqueITEM">
+													  </div>
+													  
+													  <div class="item">
+														<img class="uniqueIMG" src="uniques/unique2.jpg" alt="uniqueITEM">
+													  </div>
+													  
+													  <div class="item">
+														<img class="uniqueIMG" src="uniques/unique9.jpg" alt="uniqueITEM">
+													  </div>
+													  
+													  <div class="item">
+														<img class="uniqueIMG" src="uniques/unique6.jpg" alt="uniqueITEM">
+													  </div>
+													  
+													  <div class="item">
+														<img class="uniqueIMG" src="uniques/unique7.jpg" alt="uniqueITEM">
+													  </div>
+													</div>
+												
+													<!-- Left and right controls -->
+													<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+													  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+													  <span class="sr-only">Previous</span>
+													</a>
+													<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+													  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+													  <span class="sr-only">Next</span>
+													</a>
+												</div>
+											</div>
+											<div class="SectionCopyDiv">
+													<p>Tackle all-new vicious threats and earn their unique loot.
+													Discover Cairn’s secrets to summon supremely powerful foes. Dozens of new Monster
+													Infrequents and Hundreds of Epic and Legendary items are waiting for you!</p>
+											</div>
+										</div>
+									</div>
+									<!-- IMAGE GALLERY -->
+									<div class="hidemobile">
+										<!-- ROW 1 -->
+										<div class="row uniquerow">
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique1.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique1.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique3.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique3.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique5.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique5.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique4.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique4.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+										</div>
+										<!-- ROW 2 -->
+										<div class="row uniquerow">
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique11.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique11.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique2.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique2.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique8.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique8.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique13.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique13.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+										</div>
+										<!-- ROW 3 -->
+										<div class="row uniquerow">
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique9.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique9.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique7.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique7.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique12.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique12.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+											<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+												<a href="uniques/unique6.jpg" data-lightbox="uniques">
+													<img class="uniqueIMG" src="uniques/unique6.jpg" alt="uniqueITEM">
+												</a>
+											</div>
+										</div>
+									</div>	
+									<!-- END IMG GALLERY -->
+							</div>
+						</div>
+						<!-- SETTING -->
+						<div class="container-fluid Section SectionDivider2" id="setting">
+								<div class="videoBgDiv">
+									<div class="VideoBackground-container">
+										<video xmlns="http://www.w3.org/1999/xhtml" class="VideoBackground-video" autoplay loop muted>
+											<source src="video/grimSETTING.webm" type="video/webm" />
+											<source src="video/grimSETTING.mp4" type="video/mp4" />
+										</video>
+									</div>
+									<div class="container">
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+												<div class="videoHeaderDiv">
+													<h2>SETTING</h2>
+													<h1>Fight through new lands</h1>
+												</div>
+											</div>
+										</div>
+									 </div>
+								</div>
+							<div class="row">
+							<img class="mobileimg hidedesktop" src="mobileIMG/setting.jpg">
+							</div>
+						</div>
+						<!-- SETTING COPY -->
+						<div class="container ClassInfoDiv">
+								<div class="row">
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 centered">
+										<div class="SectionCopyDiv">
+												<div class="videoHeaderDiv hidedesktop">
+													<h2>SETTING</h2>
+													<h1>Fight through new lands</h1>
+												</div>
+											<p>Deep within the fallen city of Malmouth, the Shaper of Flesh crafts grotesque living
+											weapons that could deal a final blow to the human resistance. You must forge new alliances as
+											you push forward through deep forest, the void and into the city itself in a heroic effort to
+											end the Aetherial terror.</p>
+										</div>
+									</div>
+								</div>
+						</div>
+						<!-- EXPANSION FEATURES -->
+							<div class="container-fluid Section SectionDivider1 ClassInfoDiv2 expansionfeatures" id="expansionfeatures">
+								<div class="container">
+									<div class="row">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="SectionCopyDiv centered">
+													<h2>Expansion Features</h2>
+													<h1>Discover Malmouth</h1>
+											<p>Ashes of Malmouth's two new story chapters will send heroes hunting for epic loot,
+											pushing for the new 100 level cap, exploring new regions, and even trying their
+											luck in the new rogue-like dungeon. Will you join them?</p>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 xpacList">
+											<h3>Features:</h3>
+											<ul>
+												<li>Increased level cap of 100</li>
+												<li>New Class Masteries: Inquisitor and Necromancer</li>
+												<li>Push forward alongside the Black Legion and Inquisitor Creed in two epic chapters</li>
+												<li>New Illusionist Service NPC enables you to transform the appearance of your equipment</li>
+												<li>New Environments - Gloomwald, Ugdenbog, Malmouth</li>
+												<li>Four Factions - Unlock unique rewards or become a nemesis to spawn powerful foes</li>
+												<li>14 new Devotion Constellations</li>
+												<li>New modifiers found exclusively on equipment.</li>
+												<li>New Rogue-Like Dungeon</li>
+												<li>Expanded Stash</li>
+												<li>Reset Your Attributes and Mastery Bar - Find a potion that allows you reset your Attribute Points.</li>
+											</ul>
+										</div>
+										<div class="col-xl-5 col-xl-offset-1 col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+											<div class="text-center xpacList">
+												<img class="xpacIMG" src="boxART/boxARTgrimdawn.png"/>
+											</div>
+										</div>
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="buttonPad text-center">
+												<a href="http://store.steampowered.com/app/642280/Grim_Dawn__Ashes_of_Malmouth_Expansion/" class="buyButton">BUY NOW</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- FOOTER -->
+							<div class="container-fluid footerBG">
+								<div class="text-center">
+									<p>Media and artwork belongs exclusively to © 2009-2017 Crate Entertainment, LLC.</p>
+								</div>
+							</div>
 					</div>
-				</div>
-            </div>
-        </div>
-    </div> <!-- CONTENT END -->
+				</div>					
+			</div>
+		</div>
+	</div> 
+</div>
+</div>
+<!-- CONTENT END -->
+<!-- JQuery -->
+<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+<!-- DESKTOP NAV SCRIPT-->
+<script src="js/desktopNAV.js"></script>
+<!-- MOBILE NAV JS -->
+<script src="js/classie.js"></script>
+<script src="js/main.js"></script>
+<!-- SMOOTH SCROLL -->
+<!-- LIGHTBOX --->
+<script src="js/lightbox.min.js"></script>
+<script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+	  'alwaysShowNavOnTouchDevices' : true,
+	  'imageFadeDuration': 0,
+    });
+</script>
+<!-- CAROSUEL -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$('.carousel').carousel({
+  interval: false
+});
+</script>
+<!-- Loader  -->
+<script>
+function myFunction() {
+    $(document).ready(function() {
+    showPage();
+	});
+}
 
-    <!-- JQuery -->
-    <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
-    <!-- SCRIPTS -->
-    <script src="/js/classie.js"></script>
-	<script src="/js/main.js"></script>
+function showPage() {
+  document.getElementById("loaderDIV").style.display = "none";
+  document.getElementById("loaded").style.opacity = "100";
+}
+</script>
 </body>
 
 </html>

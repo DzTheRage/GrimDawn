@@ -1,0 +1,218 @@
+.VertAlign {
+    border-collapse: collapse;
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.VertAlign-section {
+    display: table-row;
+}
+.VertAlign-block {
+    display: table-cell;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.VertAlign-block--middle {
+    vertical-align: middle;
+}
+.DesktopNAV {
+  bottom: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 1%;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  width: 70px;
+  z-index: 500;
+  height:100%;
+  background: rgba(5, 11, 11, 0);
+}
+@media screen and (max-width:  720px) {
+  .DesktopNAV {
+    display: none;
+  }
+}
+
+.DesktopNAVwrap {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+}
+
+.DesktopNAV .NavUL {
+  padding-right: 9px;
+}
+
+.Navigation-item,
+.page.full-page-view ul .Navigation-item {
+  list-style: none;
+  margin: 0;
+}
+
+.DesktopNAV .Navigation-item {
+  text-align: right;
+}
+
+.Navigation-link {
+  display: block;
+  position: relative;
+}
+
+.DesktopNAV .Navigation-link {
+  padding-right: 50px;
+}
+
+.DesktopNAV .Navigation-icon {
+  margin: -3px -3px 0 0;
+  z-index: 600;
+}
+
+.DesktopNAV .Navigation-icon,
+.DesktopNAV .Navigation-icon:after {
+  height: 56px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 56px;
+}
+
+.DesktopNAV .Navigation-icon:after {
+  content: "";
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.DesktopNAV .Navigation-icon-constellations,
+.DesktopNAV .Navigation-icon-constellations:after {
+  background: url("../navIMG/navigation-constellations.png") no-repeat;
+}
+
+.DesktopNAV .Navigation-link:hover .Navigation-icon:after,
+.DesktopNAV .Navigation-link--active .Navigation-icon:after {
+  opacity: 1;
+}
+
+.DesktopNAV .Navigation-icon--home {
+  background-position: 100%      0;
+}
+
+.DesktopNAV .Navigation-icon--mastery {
+  background-position: 100% -56px;
+}
+
+.DesktopNAV .Navigation-icon--uniques {
+  background-position: 100% -112px;
+}
+
+.DesktopNAV .Navigation-icon--setting {
+  background-position: 100% -168px;
+}
+
+.DesktopNAV .Navigation-icon--expansionfeatures{
+  background-position: 100% -224px;
+}
+
+.DesktopNAV .Navigation-icon--home:after {
+  background-position: 0 0;
+}
+
+.DesktopNAV .Navigation-icon--mastery:after {
+  background-position: 0 -56px;
+}
+
+.DesktopNAV .Navigation-icon--uniques:after {
+  background-position: 0 -112px;
+}
+
+.DesktopNAV .Navigation-icon--setting:after {
+  background-position: 0 -168px;
+}
+
+.DesktopNAV .Navigation-icon--expansionfeatures:after {
+  background-position: 0 -224px;
+}
+
+.DesktopNAV .Navigation-icon--gameSite,
+.DesktopNAV .Navigation-icon--gameSite:after {
+  background: url("../navIMG/navigation-grimdawn.png") no-repeat 100% 0;
+  height: 63px;
+  margin: -6px -5px 0 0;
+  right: 0;
+  top: 0;
+  width: 63px;
+}
+
+.DesktopNAV .Navigation-icon--gameSite:after {
+  background-position: 0 0;
+  margin: 0;
+}
+
+.DesktopNAV .Navigation-label {
+  color: #93d7cb;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 50px;
+  opacity: 0;
+  position: relative;
+  right: 18px;
+  text-transform: uppercase;
+  -webkit-transition: color 0.2s, opacity 0.2s, right 0.4s;
+  transition: color 0.2s, opacity 0.2s, right 0.4s;
+  white-space: nowrap;
+  text-decoration:none;
+}
+
+.DesktopNAV .NavUL--expanded .Navigation-label {
+  opacity: 1;
+  right: 9px;
+}
+
+.DesktopNAV .Navigation-link:hover .Navigation-label,
+.DesktopNAV .Navigation-link--active .Navigation-label {
+  color: #fff;
+  text-shadow: none;
+}
+.DesktopNAV .Navigation-icon-facebook, .DesktopNAV .Navigation-icon-facebook::after, .DesktopNAV .Navigation-icon-twitter, .DesktopNAV .Navigation-icon-twitter::after,
+.DesktopNAV .Navigation-icon-youtube, .DesktopNAV .Navigation-icon-youtube::after{
+    background-image: url("../navIMG/social-icon-sprite.png");
+    background-repeat: no-repeat;
+    background-size: 200% 700%;
+    height: 50px !important;
+    margin: 0;
+    right: 0;
+    top: 0;
+    width: 50px !important;
+    position:absolute;
+}
+
+.DesktopNAV .Navigation-icon-facebook {
+  background-position: 0 0;
+}
+
+.DesktopNAV .Navigation-icon-facebook::after {
+  background-position: -50px 0;
+}
+
+.DesktopNAV .Navigation-icon-twitter {
+  background-position: 0 -50px;
+}
+
+.DesktopNAV .Navigation-icon-twitter::after {
+  background-position: -50px -50px;
+}
+
+.DesktopNAV .Navigation-icon-youtube {
+  background-position: 0 -100px;
+}
+
+.DesktopNAV .Navigation-icon-youtube::after {
+  background-position: -50px -100px;
+}
+
+.socialNAV {
+    margin: 2px 0 0 0 !important;
+}

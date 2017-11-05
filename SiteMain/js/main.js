@@ -11,7 +11,7 @@
 (function() {
 
 	var bodyEl = document.body,
-		content = document.querySelector( '.content-wrap' ),
+		content = document.querySelector( '.content-wrap, .icon-list ul' ),
 		openbtn = document.getElementById( 'open-button' ),
 		closebtn = document.getElementById( 'close-button' ),
 		isOpen = false;

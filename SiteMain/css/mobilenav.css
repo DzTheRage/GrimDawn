@@ -4,9 +4,7 @@
 .clearfix:after { clear: both; }
 
 .content-wrap {
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
+
 }
 .menu-wrap a {
 	color: #FFFFFF;
@@ -94,7 +92,7 @@
 }
 
 /* HOVER */
-.closebutton:hover {
+.close-button:hover {
 	opacity:0.6;
 }
 
@@ -112,7 +110,7 @@
 .menu-wrap {
 	position: absolute;
 	z-index: 1001;
-	background: #050b0b url(../parallaximg/repeat-bg.jpg);
+	background: #050b0b url(../navIMG/repeat-bg.jpg);
 	padding-top:20px;
 	font-size: 1.15em;
 	-webkit-transform: translate3d(-320px,0,0);
@@ -287,10 +285,11 @@
 
 .IconSize {
 	font-size:30px;
+	transition: color 0.4s ease;
 }
 
 .IconSize:hover {
-	color:#93d7cb;
+	color:#D2F0EA;
 }
 
 .firstchild {
@@ -329,7 +328,7 @@ transition: background 0.2s;
 }
 
 /*Media Queries */
-@media (max-width: 800px) {
+@media (max-width: 955px) {
 .mobilenav {
 	display:block;
 }

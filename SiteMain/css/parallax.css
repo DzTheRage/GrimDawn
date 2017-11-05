@@ -36,7 +36,6 @@
   top: 100%;
   left: 0;
   right: 0;
-  height: 2000px;
   z-index: 2;
 }
 
@@ -93,7 +92,7 @@
 }
 
 /** MEDIA QUERIES **/
-@media (max-width: 800px) {
+@media (max-width: 955px) {
   .desktopShow {
     display:none;
   }
