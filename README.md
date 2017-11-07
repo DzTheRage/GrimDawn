@@ -1,5 +1,5 @@
-# GrimDawn
-New expansion promotion page.
+# Grim Dawn
+New expansion promotion page for video game.
 ________________________
 Key features.
  
