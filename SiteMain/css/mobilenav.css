@@ -328,7 +328,7 @@ transition: background 0.2s;
 }
 
 /*Media Queries */
-@media (max-width: 955px) {
+@media (max-width: 1055px) {
 .mobilenav {
 	display:block;
 }
